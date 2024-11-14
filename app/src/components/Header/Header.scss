@@ -1,0 +1,32 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.header__link {
+    color: white;
+    font: 1em sans-serif;
+    font-weight: 800;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10vw;
+}
+
+.header__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+}

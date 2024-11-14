@@ -1,0 +1,32 @@
+.advantages {
+    background-color: black;
+    height: 520px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25vw;
+}
+
+.advantages__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.advantages__list {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font: 1em sans-serif;
+    font-weight: 600;
+}
+
+.advantages__item {
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.4);
+    padding-bottom: 20px;
+    padding-top: 0px;
+    margin-top: 10px;
+    margin-bottom: 11px;
+}

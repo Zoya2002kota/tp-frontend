@@ -1,30 +1,16 @@
-import { useState } from 'react';
-import ReactLogo from './assets/svg/react.svg?react'; // svgr plugin usage
-import viteLogo from '/vite.svg';
 import './styles/App.scss';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
+import { Advantages } from './pages/LandingPage/components/Advantages/Advantages';
 
 export const App = () => {
-	const [count, setCount] = useState(0);
-
 	return (
 		<>
-			<div>
-				<p>This is an image inside anchor imported like img tag:</p>
-				<a href="https://vitejs.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-			</div>
-			<div>
-				<p>
-					This is an image inside anchor imported like React component via
-					vite-plugin-svgr:
-				</p>
-				<a href="https://react.dev" target="_blank">
-					<ReactLogo />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+			<Header/>
+			<Advantages/>
+			<p>Hello world</p>
+			<p>goodbye</p>
+			<Footer/>
 		</>
 	);
 };
