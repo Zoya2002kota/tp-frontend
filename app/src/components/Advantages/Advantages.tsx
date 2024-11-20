@@ -1,6 +1,7 @@
 import './Advantages.scss';
 
 export const Advantages = () => {
+
     return (
         <section className='advantages padding--width'>
             <div className='advantages__info'>

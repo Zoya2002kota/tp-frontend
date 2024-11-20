@@ -9,7 +9,6 @@ export const AppRoutes = () => {
                 <Route index element={<LandingPage/>}/>
                 {/* <Route path="design" element={<DesignPage/>}/> */}
             </Route>
-
         </Routes>
     )
 }
