@@ -1,4 +1,8 @@
-.popularProducts {
+.popular-products {
+    padding-block: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    background-color: black;
 }

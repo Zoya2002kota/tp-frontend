@@ -1,23 +1,17 @@
 import './PopularProducts.scss'
-import { ProductCard } from '../../../../components/ProductCard/ProductCard'
-
-const arr:string[] = ['a', 'b', 'c']
+import { ProductCard } from '../../../../components'
+import { Swiper } from './components/Swiper/Swiper'
 
 export const PopularProducts = () => {
     return (
-        <section className='popularProducts padding--width'>
-            {
-                arr.map((arrValue, arrIndex) => {
-                    return(
-                    <p key={arrIndex}>{arrValue}</p>
-                )
-                })
-            }
-
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
+        <section className='popular-products padding--width'>
+            <h1 className='popular-products__title'>Популярное</h1>
+            <Swiper name="hello">
+                <ProductCard/>
+                <ProductCard/>
+                <ProductCard/>
+                <ProductCard/>
+            </Swiper>
         </section>
     )
 }
