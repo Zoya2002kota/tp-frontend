@@ -1,0 +1,42 @@
+.productCard {
+    color: white;
+    height: 325px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.productCard__product-img {
+    height: 250px;
+    width: 200px;
+}
+
+.productCard__title {
+    text-align: left;
+}
+
+.productCard__price {
+    text-align: left;
+}
+
+.productCard__add-to-cart {
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.productCard__note-to-cart {
+    align-items: center;
+}
+
+.productCard__cart-img {
+    position: sticky;
+    left: 0;
+    width: 13px;
+    height: 13px;
+} 
+
+

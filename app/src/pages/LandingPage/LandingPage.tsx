@@ -1,11 +1,11 @@
-import { ProductCard } from "../../components/ProductCard/ProductCard"
 import { Advantages } from "./components/Advantages/Advantages"
+import { PopularProducts } from "./components/PopularProducts/PopularProducts"
 
 export const LandingPage = () => {
     return (
         <>
             <Advantages/>
-            <ProductCard/>
+            <PopularProducts/>
         </>
     )
 }
