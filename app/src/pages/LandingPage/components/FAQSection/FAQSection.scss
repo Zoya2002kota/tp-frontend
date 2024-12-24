@@ -1,0 +1,37 @@
+.faq {
+    padding-inline: 20vw;
+    background-color: black;
+
+&__accordion {
+    background-color: black;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+
+    &:hover {
+        background-color: #ccc;
+    }
+
+  }
+
+  &__active {
+    background-color: #ccc;
+  }
+  
+
+  
+  /* Style the accordion panel. Note: hidden by default */
+  &__panel {
+    padding: 0 18px;
+    background-color: black;
+    overflow: hidden;
+    display: none;
+  }
+
+}
+

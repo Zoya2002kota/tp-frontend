@@ -1,0 +1,21 @@
+.cart-card {
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+
+    &__product-img {
+        height: 100px;
+        width: 80px;
+    }
+
+    &__counter {
+        display: flex;
+        flex-direction: row;
+    }
+}
+

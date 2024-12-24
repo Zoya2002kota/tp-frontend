@@ -6,10 +6,9 @@ interface Props {
     name: string;
 }
 
-export const Swiper : React.FC<Props> = ({children, name}) => {
+export const Swiper : React.FC<Props> = ({children}) => {
     return (
         <div className='swiper'>
-            <p>{name}</p>
             {children}
         </div>
     )
