@@ -1,6 +1,5 @@
-import './PopularProducts.scss'
-import { ProductCard } from '../../../../components'
-import { Swiper } from './components/Swiper/Swiper'
+import './CartSection.scss';
+import { CartSwiper, CartCard, OrderBlock } from './components';
 import { useEffect, useState } from 'react';
 
 interface Tattoos {
@@ -14,7 +13,7 @@ interface Tattoos {
     updated_at: string
 }
 
-export const PopularProducts = () => {
+export const CartSection = () => {
     const [tattoos, setTattos] = useState<Tattoos[]>([]);
 
 
@@ -33,15 +32,17 @@ export const PopularProducts = () => {
     
 
     return (
-        <section className='popular-products padding--width'>
-            <h1 className='popular-products__title'>Популярное</h1>
-            <Swiper>
-                {
-                    tattoos.map((tattoo) => 
-                        <ProductCard name={tattoo.name} price={tattoo.price} image_url={tattoo.image_url}/>
-                    )
-                }
-            </Swiper>
+        <section className='cart-section padding--width'>
+            <div className='cart-section__swiper'>
+                <CartSwiper>
+                    {
+                        tattoos.map((tattoo) => 
+                            <CartCard name={tattoo.name} price={tattoo.price} image_url={tattoo.image_url}/>
+                        )
+                    }
+                </CartSwiper>
+            </div>
+            <OrderBlock/>
         </section>
     )
 }

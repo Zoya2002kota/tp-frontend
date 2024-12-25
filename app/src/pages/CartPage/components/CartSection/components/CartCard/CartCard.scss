@@ -7,6 +7,12 @@
     padding-bottom: 15px;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid;
+    border-color: rgba(255, 255, 255, 0.7);
+
+    // &__title {
+    //     justify-content: left;
+    // }
 
     &__product-img {
         height: 100px;

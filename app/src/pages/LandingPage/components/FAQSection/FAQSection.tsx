@@ -1,4 +1,5 @@
 import './FAQSection.scss';
+import plus_image from '../../../../assets/png/plus.png';
 
 export const FAQSection = () => {
 	interface Accordion {
@@ -7,10 +8,10 @@ export const FAQSection = () => {
 	}
 
 	const accordionArray: Accordion[] = [
-		{ title: 'Section 1', description: 'Lorem ipsum...' },
-		{ title: 'Section 2', description: 'brat...' },
-		{ title: 'Section 3', description: 'geg...' },
-    { title: 'Section 4', description: 'geg...' },
+		{ title: 'В какие города есть доставка?', description: 'Доставка осуществляется в Москву, Санкт-Петербург, Казань, Калининград' },
+		{ title: 'Татуировки безопасны?', description: 'Татуировки сделаны из растительных материалов, поэтому совершенно безопасны. Никаких игл и повреждений кожи' },
+		{ title: 'Я сделал заказ, как его отследить?', description: 'Так как доставка производится Почтой России, то отследить посылку можно на их сайте по трек-номеру' },
+    { title: 'Как работают татуировки?', description: 'Татуировки окрашивают роговой слой кожи' },
 	];
 
   const handleAccordion = (target) => {
@@ -29,7 +30,9 @@ export const FAQSection = () => {
         accordionArray.map( (item, index) => {
           return (
             <div key={index}> 
-              <button className="faq__accordion" onClick={(event) => handleAccordion(event.target)}>{item.title}</button>
+              <button className="faq__accordion" onClick={(event) => handleAccordion(event.target)}>{item.title} 
+                {/* <img className='faq__plus-img' src={plus_image}/> */}
+              </button>
               <div className="faq__panel">
                 <p>{item.description}</p>
               </div>

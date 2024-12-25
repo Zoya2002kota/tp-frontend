@@ -4,7 +4,7 @@ export const Advantages = () => {
     return (
         <section className='advantages padding--width'>
             <div className='advantages__info'>
-                <h1 className='advantages__title'>Какой-то заголовок</h1>
+                <h1 className='advantages__title'>Преимущества наших татуировок</h1>
                 <p className='advantages__description'>description text</p>
             </div>
             <ul className='advantages__list'>

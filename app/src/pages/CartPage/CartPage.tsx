@@ -1,10 +1,8 @@
 import './CartPage.scss';
-import { CartCard } from './components';
+import { CartSection } from './components/CartSection/CartSection';
 
 export const CartPage = () => {
     return (
-        <>
-            <CartCard/>
-        </>
+        <CartSection/>
     )
 }

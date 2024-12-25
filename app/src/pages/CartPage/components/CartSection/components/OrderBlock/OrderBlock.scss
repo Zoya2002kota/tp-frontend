@@ -1,0 +1,33 @@
+.order-block {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 150px;
+    width: 20vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 24px;
+    padding-bottom: 36px;
+    display: grid;
+    grid-template-rows: repeat(2, 75px);
+    grid-template-columns: repeat(1, 20vw);
+    gap: 20px;
+    position: absolute;
+    left: 75vw;
+    top: 160px;
+
+    &__sum {
+        display: flex;
+        flex-direction: row;
+        gap: 7vw;
+        color: black;
+        font-size: larger;
+        font-weight: 500;
+    }
+
+    &__submit-button {
+        width: 8vw; 
+        height: 30px;
+        position: relative;
+        left: 5vw;
+        bottom: 36px;
+    }
+}

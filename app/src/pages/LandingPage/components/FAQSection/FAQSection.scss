@@ -1,37 +1,53 @@
 .faq {
     padding-inline: 20vw;
     background-color: black;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
 &__accordion {
     background-color: black;
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
-    text-align: left;
+    color: white;
+    text-align: center;
     border: none;
     outline: none;
-    transition: 0.4s;
+    transition: 0.3s;
+    width: 30vw;
+    font-size: larger;
+    font-weight: 500;
 
     &:hover {
         background-color: #ccc;
+        color: white;
     }
 
   }
 
-  &__active {
-    background-color: #ccc;
+&__active {
+    background-color: #928f8f;
+    color: black;
+    width: 65vw;
   }
   
-
+&__title {
+    color: white;
+  }
   
-  /* Style the accordion panel. Note: hidden by default */
-  &__panel {
+&__panel {
     padding: 0 18px;
     background-color: black;
     overflow: hidden;
     display: none;
+    color: white;
   }
+
+// &__plus-img {
+//   position: relative;
+//   left: 40vw;
+//   bottom: 2vh;
+//   }
 
 }
 
