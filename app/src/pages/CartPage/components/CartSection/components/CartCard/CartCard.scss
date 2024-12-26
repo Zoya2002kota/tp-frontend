@@ -1,18 +1,16 @@
 .cart-card {
+    padding: 15px 1vw;
     height: 130px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 15% 45% 25% 11% 4%;
     background-color: black;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid;
     border-color: rgba(255, 255, 255, 0.7);
 
-    // &__title {
-    //     justify-content: left;
-    // }
+    &__title {
+        text-align: start;
+    }
 
     &__product-img {
         height: 100px;

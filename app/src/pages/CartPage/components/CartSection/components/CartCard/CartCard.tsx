@@ -5,7 +5,7 @@ import { useState } from 'react';
 interface Props {
     name: string,
     price: number,
-    image_url : string
+    image_url: string
 }
 
 export const CartCard = ({name, price, image_url} : Props) => {
@@ -21,7 +21,7 @@ export const CartCard = ({name, price, image_url} : Props) => {
     }
 
     return (
-        <div className='cart-card padding--width'>
+        <div className='cart-card'>
             <img className='cart-card__product-img' src={image_url}/>
             <h2 className='cart-card__title'>{name}</h2>
             <h4 className='cart-card__price'>{price} руб.</h4>
