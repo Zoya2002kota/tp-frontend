@@ -7,7 +7,7 @@ interface Props {
 
 export const Swiper : React.FC<Props> = ({children}) => {
     return (
-        <div className='swiper'>
+        <div className='swiper padding--width'>
             {children}
         </div>
     )

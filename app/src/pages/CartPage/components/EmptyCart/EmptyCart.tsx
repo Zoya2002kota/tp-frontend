@@ -1,5 +1,5 @@
 import './EmptyCart.scss';
-import {empty_cart} from '../../../../assets/png/cart_for_empty_cart.png';
+import empty_cart from '../../../../assets/png/cart_for_empty_cart.png';
 
 export const EmptyCart = () => {
     return (
