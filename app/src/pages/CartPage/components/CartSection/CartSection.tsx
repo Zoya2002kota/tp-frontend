@@ -1,48 +1,37 @@
 import './CartSection.scss';
 import { CartSwiper, CartCard, OrderBlock } from './components';
-import { useEffect, useState } from 'react';
-
-interface Tattoos {
-    id: number,
-    name: string,
-    description: string,
-    price: number,
-    image_url: string,
-    artist_id: number,
-    created_at: string,
-    updated_at: string
-}
+import { useEffect } from 'react';
+import { useAppDispatch, useAppSelector } from '../../../../hooks';
+import { fetchCart } from '../../../../store/reducers/cart';
 
 export const CartSection = () => {
-    const [tattoos, setTattos] = useState<Tattoos[]>([]);
+	const dispatch = useAppDispatch();
 
+	const {
+		items,
+		error: cartError,
+		isLoading: isCartLoading,
+	} = useAppSelector((state) => state.cartReducer);
 
-    const getTattoos = async () => {
-        const data = await fetch('http://localhost:3005/tattoos')
-        .then(res => res.json())
-        .catch(error => console.error(error))
-        return data;
-    }
+	useEffect(() => {
+		dispatch(fetchCart(1));
+	}, []);
 
-    // useEffect(() => {}, []);
-    
-    useEffect(() => {
-        getTattoos().then((data) => setTattos(data));
-    }, [])
-    
-
-    return (
-        <section className='cart-section padding--width'>
-            <div className='cart-section__swiper'>
-                <CartSwiper>
-                    {
-                        tattoos.map((tattoo) => 
-                            <CartCard name={tattoo.name} price={tattoo.price} image_url={tattoo.image_url}/>
-                        )
-                    }
-                </CartSwiper>
-            </div>
-            <OrderBlock/>
-        </section>
-    )
-}
+	return (
+		<section className="cart-section padding--width">
+			<div className="cart-section__swiper">
+				{cartError ? (
+					<h1>{cartError}</h1>
+				) : isCartLoading ? (
+					<h1>LOADING...</h1>
+				) : (
+					<CartSwiper>
+						{items &&
+							items.map((item) => <CartCard key={item.tattoo.id} tattoo={item.tattoo} />)}
+					</CartSwiper>
+				)}
+			</div>
+			<OrderBlock />
+		</section>
+	);
+};
