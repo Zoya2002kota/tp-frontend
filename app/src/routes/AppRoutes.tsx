@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { LandingPage, CatalogPage, RootLayout, CartPage } from '../pages'
+import { LandingPage, CatalogPage, RootLayout, CartPage} from '../pages'
 
 export const AppRoutes = () => {
     return (
@@ -8,6 +8,7 @@ export const AppRoutes = () => {
                 <Route index element={<LandingPage/>}/>
                 <Route path="catalog" element={<CatalogPage/>}/>
                 <Route path="cart" element={<CartPage/>}/>
+                {/* <Route path="tattpp/id" element={<ProductPage/>}/> */}
                 {/* <Route path="design" element={<DesignPage/>}/> */}
             </Route>
         </Routes>
